@@ -1,0 +1,37 @@
+#times {
+    display: none;
+}
+
+#age {
+    display: none;
+}
+
+#ticket {
+    display: none;
+}
+
+/*.contact {
+    cursor: pointer;
+    color: #0088cc;
+}
+
+.contact:hover {
+    text-decoration: underline;
+}*/
+
+
+
+
+.space {
+    border: black 2px solid;
+    height: 150;
+    width: 150;
+    display: inline-block;
+}
+
+html {
+    position:absolute;
+    top: 15%;
+    left: 15%;
+
+}
