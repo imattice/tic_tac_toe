@@ -42,41 +42,30 @@ describe ('Space', function() {
         })
     })
 })
-// describe ('Game', function() {
-// //once more 3 or turns have passed check if winning combo has been input
-//     it('checks the x array for a winning combo of positions', function() {
-//     var x_choice = [1, 2, 4, 7, 9];
-//     testGame = new Game (x_choice, winning_combos);
-//     testGame.checkWin(x_choice, winning_combos);
-//
-//         expect(testGame.checkWin).to.equal(true);
-//     })
-// })
 
+
+describe ('Game', function() {
+//once more 3 or turns have passed check if winning combo has been input
+    it('checks the x array for a winning combo of positions', function() {
+    var x_choice = [1, 2, 4, 7, 9];
+    var testGame = new Game (x_choice, winning_combos, turn);
+
+        expect(testGame.checkWin(x_choice, winning_combos)).to.equal(true);
+    })
+
+//handles ties
+    it('alerts the user if all spaces are full on turn 9', function() {
+        var x_choice = [2, 3, 4, 5, 9];
+        var o_choice = [1, 6, 7, 8];
+        var turn = 9;
+        var testGame = new Game (x_choice, winning_combos, turn);
+
+            expect(testGame.checkWin(x_choice, winning_combos)).to.equal(true);
+    })
+//clears board after win or tie
+//     it('removes x_or_o values for all spaces')
 //
-// if all spaces have input but no winning combo then clear the board and start again
-//
-// input must be thee of the same players input if 3 match to be considerd a win
-//
-// if no combo found keep inputing
-//
+//     expect(testGame.clearBoard).to.equal()
+})
+
 // if winning match found clear board, and send new screen to print certif
-//
-//
-// for each combo in array check to see if the frist index equals a winning combo then award a win to the proper team
-//
-//
-//
-//
-//
-//
-//
-//
-// if (first_input === 1)
-//   // keep checking for winning combo
-// } else {
-//   // next players turn
-// }
-//
-//
-// if

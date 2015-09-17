@@ -16,11 +16,9 @@ var winning_combos = [123, 456, 789, 147, 258, 369, 159, 357]
         }
         return result;
     }
-
 //links the user-selected position to the current value of the current turn (either x or o)
     function Space (position, x_or_o) {
         x_or_o = player(turn);
-        debugger;
         this.position = position;
         this.x_or_o = x_or_o;
 }
@@ -35,16 +33,11 @@ var winning_combos = [123, 456, 789, 147, 258, 369, 159, 357]
     }
 
 
-// function Game (array, winning_combos) {
-//     this.array = array;
-//     this.winning_combos = winning_combos;
+function Game (array, winning_combos) {
+    this.array = array;
+    this.winning_combos = winning_combos;
 
-    //prototype for each array?
-
-    //check for winner & display
-
-        //once the Game detects a winning combo, no longer check for combos or accept any further input
-
+    //handle ties
 
     //clear spaces
         // turn 0 = null for all spaces?
@@ -52,21 +45,175 @@ var winning_combos = [123, 456, 789, 147, 258, 369, 159, 357]
     //reset turns
         // turn = 1;
 
-// }
+}
+
 //why use prototype vs function?
     //A prototype is used for only an object
     //A function is used by the whole program
-// Game.prototype.checkWin = function(player_array, win_array) {
-//     var ordered_array = player_array.sort();
-//     for(var i = 0; i <=ordered_array.length; i++) {
-//         for(var q = 0; q = <=win_array.length; i++) {
-//             if  (ordered_array[i] == win_array[q][0]) &&
-//                 (ordered_array[i] == win_array[q][1]) &&
-//                 (ordered_array[i] == win_array[q][2]) {
-//                     return true;
-//             } else {
-//                 return false;
-//             }
-//         }
-//     }
-// };
+//compares user selections with winning combinations
+    Game.prototype.checkWin = function(player_array, win_array, turn) {
+        var ordered_array = player_array.sort();
+        debugger;
+        for(var i = 0; i <= ordered_array.length; i++) {
+            for(var q = 0; q <= win_array.length; i++) {
+                if (ordered_array[i] == win_array[q][0]){
+                    if (ordered_array[i] == win_array[q][1]) {
+                        if (ordered_array[i] == win_array[q][2]) {
+                            alert('win');
+                            return true;
+                        } else{
+                            if (turn = 9){
+                                alert ('tie')
+                                return false;
+                            } else {
+                                turn++;
+                                return false;
+                            }
+                        }
+                    } else{
+                        if (turn = 9){
+                            alert ('tie')
+                            return false;
+                        } else {
+                            turn++;
+                            return false;
+                        }
+                          }
+                    } else{
+                        if (turn = 9){
+                            alert ('tie')
+                            return false;
+                        } else {
+                            turn++;
+                            return false;
+                    }
+                }
+            }
+        }
+    }
+
+
+//////////////////////////////////// J QUERY //////////////////////////////////
+$(document).ready (function() {
+
+///////////////////////////////////////////////////////////////////////////////
+  $( "#one" ).click(function() {
+  Game.userChoice (x_or_o, 1);
+  if (turn % 2 === 0 ) {
+      player_array = o_choice
+      var mark_one = "X"
+  }  else  {
+      player_array = x_choice
+  }
+  $( "#mustard" ).append( mark_one );
+  Game.checkWin(player_array, win_array, turn);
+  }
+});
+
+$( "#two" ).click(function() {
+Game.userChoice (x_or_o, 2);
+if (turn % 2 === 0 ) {
+    player_array = o_choice
+    var mark_two = "X"
+}  else  {
+    player_array = x_choice
+}
+$( "#mayo" ).append( mark_two );
+Game.checkWin(player_array, win_array, turn);
+}
+});
+
+$( "three" ).click(function() {
+Game.userChoice (x_or_o, 3);
+if (turn % 2 === 0 ) {
+    player_array = o_choice
+    var mark_one = "X"
+}  else  {
+    player_array = x_choice
+}
+$( "#cat-soup" ).append( mark_three );
+Game.checkWin(player_array, win_array, turn);
+}
+});
+
+$( "four" ).click(function() {
+Game.userChoice (x_or_o, 4);
+if (turn % 2 === 0 ) {
+    player_array = o_choice
+    var mark_one = "X"
+}  else  {
+    player_array = x_choice
+}
+$( "#pickles" ).append( mark_four );
+Game.checkWin(player_array, win_array, turn);
+}
+});
+
+$( "five" ).click(function() {
+Game.userChoice (x_or_o, 5);
+if (turn % 2 === 0 ) {
+    player_array = o_choice
+    var mark_one = "X"
+}  else  {
+    player_array = x_choice
+}
+$( "#bbq-sauce" ).append( mark_five );
+Game.checkWin(player_array, win_array, turn);
+}
+});
+
+$( "six" ).click(function() {
+Game.userChoice (x_or_o, 6);
+if (turn % 2 === 0 ) {
+    player_array = o_choice
+    var mark_one = "X"
+}  else  {
+    player_array = x_choice
+}
+$( "#chalula" ).append( mark_six );
+Game.checkWin(player_array, win_array, turn);
+}
+});
+
+$( "seven" ).click(function() {
+Game.userChoice (x_or_o, 7);
+if (turn % 2 === 0 ) {
+    player_array = o_choice
+    var mark_one = "X"
+}  else  {
+    player_array = x_choice
+}
+$( "#spicy-mustard" ).append( mark_seven );
+Game.checkWin(player_array, win_array, turn);
+}
+});
+
+$( "eight" ).click(function() {
+Game.userChoice (x_or_o, 8);
+if (turn % 2 === 0 ) {
+    player_array = o_choice
+    var mark_one = "X"
+}  else  {
+    player_array = x_choice
+}
+$( "#jam" ).append( mark_eight );
+Game.checkWin(player_array, win_array, turn);
+}
+});
+
+
+$( "nine" ).click(function() {
+Game.userChoice (x_or_o, 9);
+if (turn % 2 === 0 ) {
+    player_array = o_choice
+    var mark_one = "X"
+}  else  {
+    player_array = x_choice
+}
+$( "#p-butta" ).append( mark_nine );
+Game.checkWin(player_array, win_array, turn);
+}
+});
+
+
+}); // from doc ready
