@@ -104,6 +104,7 @@ $(document).ready (function() {
       var mark_one = "X"
   }  else  {
       player_array = x_choice
+      var mark_one = "O"
   }
   $( "#mustard" ).append( mark_one );
   Game.checkWin(player_array, win_array, turn);
@@ -117,84 +118,91 @@ if (turn % 2 === 0 ) {
     var mark_two = "X"
 }  else  {
     player_array = x_choice
+    var mark_one = "O"
 }
 $( "#mayo" ).append( mark_two );
 Game.checkWin(player_array, win_array, turn);
 }
 });
 
-$( "three" ).click(function() {
+$( "#three" ).click(function() {
 Game.userChoice (x_or_o, 3);
 if (turn % 2 === 0 ) {
     player_array = o_choice
     var mark_one = "X"
 }  else  {
     player_array = x_choice
+    var mark_one = "O"
 }
 $( "#cat-soup" ).append( mark_three );
 Game.checkWin(player_array, win_array, turn);
 }
 });
 
-$( "four" ).click(function() {
+$( "#four" ).click(function() {
 Game.userChoice (x_or_o, 4);
 if (turn % 2 === 0 ) {
     player_array = o_choice
     var mark_one = "X"
 }  else  {
     player_array = x_choice
+    var mark_one = "O"
 }
 $( "#pickles" ).append( mark_four );
 Game.checkWin(player_array, win_array, turn);
 }
 });
 
-$( "five" ).click(function() {
+$( "#five" ).click(function() {
 Game.userChoice (x_or_o, 5);
 if (turn % 2 === 0 ) {
     player_array = o_choice
     var mark_one = "X"
 }  else  {
     player_array = x_choice
+    var mark_one = "O"
 }
 $( "#bbq-sauce" ).append( mark_five );
 Game.checkWin(player_array, win_array, turn);
 }
 });
 
-$( "six" ).click(function() {
+$( "#six" ).click(function() {
 Game.userChoice (x_or_o, 6);
 if (turn % 2 === 0 ) {
     player_array = o_choice
     var mark_one = "X"
 }  else  {
     player_array = x_choice
+    var mark_one = "O"
 }
 $( "#chalula" ).append( mark_six );
 Game.checkWin(player_array, win_array, turn);
 }
 });
 
-$( "seven" ).click(function() {
+$( "#seven" ).click(function() {
 Game.userChoice (x_or_o, 7);
 if (turn % 2 === 0 ) {
     player_array = o_choice
     var mark_one = "X"
 }  else  {
     player_array = x_choice
+    var mark_one = "O"
 }
 $( "#spicy-mustard" ).append( mark_seven );
 Game.checkWin(player_array, win_array, turn);
 }
 });
 
-$( "eight" ).click(function() {
+$( "#eight" ).click(function() {
 Game.userChoice (x_or_o, 8);
 if (turn % 2 === 0 ) {
     player_array = o_choice
     var mark_one = "X"
 }  else  {
     player_array = x_choice
+    var mark_one = "O"
 }
 $( "#jam" ).append( mark_eight );
 Game.checkWin(player_array, win_array, turn);
@@ -202,13 +210,14 @@ Game.checkWin(player_array, win_array, turn);
 });
 
 
-$( "nine" ).click(function() {
+$( "#nine" ).click(function() {
 Game.userChoice (x_or_o, 9);
 if (turn % 2 === 0 ) {
     player_array = o_choice
     var mark_one = "X"
 }  else  {
     player_array = x_choice
+    var mark_one = "O"
 }
 $( "#p-butta" ).append( mark_nine );
 Game.checkWin(player_array, win_array, turn);
