@@ -61,32 +61,16 @@ function Game (array, winning_combos) {
                         if (ordered_array[i] == win_array[q][2]) {
                             alert('win');
                             return true;
-                        } else{
-                            if (turn = 9){
-                                alert ('tie')
-                                return false;
-                            } else {
-                                turn++;
-                                return false;
-                            }
-                        }
-                    } else{
-                        if (turn = 9){
-                            alert ('tie')
-                            return false;
-                        } else {
-                            turn++;
-                            return false;
-                        }
-                          }
-                    } else{
-                        if (turn = 9){
-                            alert ('tie')
-                            return false;
-                        } else {
-                            turn++;
-                            return false;
+                } else{
+                    if (turn = 9){
+                        alert ('tie')
+                        return false;
+                    } else {
+                        turn++;
+                        return false;
                     }
+                }
+                }
                 }
             }
         }
@@ -94,135 +78,135 @@ function Game (array, winning_combos) {
 
 
 //////////////////////////////////// J QUERY //////////////////////////////////
-$(document).ready (function() {
-
-///////////////////////////////////////////////////////////////////////////////
-  $( "#one" ).click(function() {
-  Game.userChoice (x_or_o, 1);
-  if (turn % 2 === 0 ) {
-      player_array = o_choice
-      var mark_one = "X"
-  }  else  {
-      player_array = x_choice
-      var mark_one = "O"
-  }
-  $( "#mustard" ).append( mark_one );
-  Game.checkWin(player_array, win_array, turn);
-  }
-});
-
-$( "#two" ).click(function() {
-Game.userChoice (x_or_o, 2);
-if (turn % 2 === 0 ) {
-    player_array = o_choice
-    var mark_two = "X"
-}  else  {
-    player_array = x_choice
-    var mark_one = "O"
-}
-$( "#mayo" ).append( mark_two );
-Game.checkWin(player_array, win_array, turn);
-}
-});
-
-$( "#three" ).click(function() {
-Game.userChoice (x_or_o, 3);
-if (turn % 2 === 0 ) {
-    player_array = o_choice
-    var mark_one = "X"
-}  else  {
-    player_array = x_choice
-    var mark_one = "O"
-}
-$( "#cat-soup" ).append( mark_three );
-Game.checkWin(player_array, win_array, turn);
-}
-});
-
-$( "#four" ).click(function() {
-Game.userChoice (x_or_o, 4);
-if (turn % 2 === 0 ) {
-    player_array = o_choice
-    var mark_one = "X"
-}  else  {
-    player_array = x_choice
-    var mark_one = "O"
-}
-$( "#pickles" ).append( mark_four );
-Game.checkWin(player_array, win_array, turn);
-}
-});
-
-$( "#five" ).click(function() {
-Game.userChoice (x_or_o, 5);
-if (turn % 2 === 0 ) {
-    player_array = o_choice
-    var mark_one = "X"
-}  else  {
-    player_array = x_choice
-    var mark_one = "O"
-}
-$( "#bbq-sauce" ).append( mark_five );
-Game.checkWin(player_array, win_array, turn);
-}
-});
-
-$( "#six" ).click(function() {
-Game.userChoice (x_or_o, 6);
-if (turn % 2 === 0 ) {
-    player_array = o_choice
-    var mark_one = "X"
-}  else  {
-    player_array = x_choice
-    var mark_one = "O"
-}
-$( "#chalula" ).append( mark_six );
-Game.checkWin(player_array, win_array, turn);
-}
-});
-
-$( "#seven" ).click(function() {
-Game.userChoice (x_or_o, 7);
-if (turn % 2 === 0 ) {
-    player_array = o_choice
-    var mark_one = "X"
-}  else  {
-    player_array = x_choice
-    var mark_one = "O"
-}
-$( "#spicy-mustard" ).append( mark_seven );
-Game.checkWin(player_array, win_array, turn);
-}
-});
-
-$( "#eight" ).click(function() {
-Game.userChoice (x_or_o, 8);
-if (turn % 2 === 0 ) {
-    player_array = o_choice
-    var mark_one = "X"
-}  else  {
-    player_array = x_choice
-    var mark_one = "O"
-}
-$( "#jam" ).append( mark_eight );
-Game.checkWin(player_array, win_array, turn);
-}
-});
-
-
-$( "#nine" ).click(function() {
-Game.userChoice (x_or_o, 9);
-if (turn % 2 === 0 ) {
-    player_array = o_choice
-    var mark_one = "X"
-}  else  {
-    player_array = x_choice
-    var mark_one = "O"
-}
-$( "#p-butta" ).append( mark_nine );
-Game.checkWin(player_array, win_array, turn);
-}
-});
-
-
-}); // from doc ready
+// $(document).ready (function() {
+//
+// ///////////////////////////////////////////////////////////////////////////////
+//   $( "#one" ).click(function() {
+//   Game.userChoice (x_or_o, 1);
+//   if (turn % 2 === 0 ) {
+//       player_array = o_choice
+//       var mark_one = "X"
+//   }  else  {
+//       player_array = x_choice
+//       var mark_one = "O"
+//   }
+//   $( "#mustard" ).append( mark_one );
+//   Game.checkWin(player_array, win_array, turn);
+//   }
+// });
+//
+// $( "#two" ).click(function() {
+// Game.userChoice (x_or_o, 2);
+// if (turn % 2 === 0 ) {
+//     player_array = o_choice
+//     var mark_two = "X"
+// }  else  {
+//     player_array = x_choice
+//     var mark_one = "O"
+// }
+// $( "#mayo" ).append( mark_two );
+// Game.checkWin(player_array, win_array, turn);
+// }
+// });
+//
+// $( "#three" ).click(function() {
+// Game.userChoice (x_or_o, 3);
+// if (turn % 2 === 0 ) {
+//     player_array = o_choice
+//     var mark_one = "X"
+// }  else  {
+//     player_array = x_choice
+//     var mark_one = "O"
+// }
+// $( "#cat-soup" ).append( mark_three );
+// Game.checkWin(player_array, win_array, turn);
+// }
+// });
+//
+// $( "#four" ).click(function() {
+// Game.userChoice (x_or_o, 4);
+// if (turn % 2 === 0 ) {
+//     player_array = o_choice
+//     var mark_one = "X"
+// }  else  {
+//     player_array = x_choice
+//     var mark_one = "O"
+// }
+// $( "#pickles" ).append( mark_four );
+// Game.checkWin(player_array, win_array, turn);
+// }
+// });
+//
+// $( "#five" ).click(function() {
+// Game.userChoice (x_or_o, 5);
+// if (turn % 2 === 0 ) {
+//     player_array = o_choice
+//     var mark_one = "X"
+// }  else  {
+//     player_array = x_choice
+//     var mark_one = "O"
+// }
+// $( "#bbq-sauce" ).append( mark_five );
+// Game.checkWin(player_array, win_array, turn);
+// }
+// });
+//
+// $( "#six" ).click(function() {
+// Game.userChoice (x_or_o, 6);
+// if (turn % 2 === 0 ) {
+//     player_array = o_choice
+//     var mark_one = "X"
+// }  else  {
+//     player_array = x_choice
+//     var mark_one = "O"
+// }
+// $( "#chalula" ).append( mark_six );
+// Game.checkWin(player_array, win_array, turn);
+// }
+// });
+//
+// $( "#seven" ).click(function() {
+// Game.userChoice (x_or_o, 7);
+// if (turn % 2 === 0 ) {
+//     player_array = o_choice
+//     var mark_one = "X"
+// }  else  {
+//     player_array = x_choice
+//     var mark_one = "O"
+// }
+// $( "#spicy-mustard" ).append( mark_seven );
+// Game.checkWin(player_array, win_array, turn);
+// }
+// });
+//
+// $( "#eight" ).click(function() {
+// Game.userChoice (x_or_o, 8);
+// if (turn % 2 === 0 ) {
+//     player_array = o_choice
+//     var mark_one = "X"
+// }  else  {
+//     player_array = x_choice
+//     var mark_one = "O"
+// }
+// $( "#jam" ).append( mark_eight );
+// Game.checkWin(player_array, win_array, turn);
+// }
+// });
+//
+//
+// $( "#nine" ).click(function() {
+// Game.userChoice (x_or_o, 9);
+// if (turn % 2 === 0 ) {
+//     player_array = o_choice
+//     var mark_one = "X"
+// }  else  {
+//     player_array = x_choice
+//     var mark_one = "O"
+// }
+// $( "#p-butta" ).append( mark_nine );
+// Game.checkWin(player_array, win_array, turn);
+// }
+// });
+//
+//
+// }); // from doc ready

@@ -48,6 +48,7 @@ describe ('Game', function() {
 //once more 3 or turns have passed check if winning combo has been input
     it('checks the x array for a winning combo of positions', function() {
     var x_choice = [1, 2, 4, 7, 9];
+    var turn = 5;
     var testGame = new Game (x_choice, winning_combos, turn);
 
         expect(testGame.checkWin(x_choice, winning_combos)).to.equal(true);
