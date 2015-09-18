@@ -1,6 +1,5 @@
 var turn = 1;
 
-
 var values = ['x', 'o', 'x', 'o', 'x', 'o', 'x', 'o', 'x'];
 var positions = [1, 2, 3,
                  4, 5, 6,
@@ -31,7 +30,6 @@ var winning_combos = [123, 456, 789, 147, 258, 369, 159, 357]
             o_choice.push(position);
         }
     }
-
 
 function Game (array, winning_combos) {
     this.array = array;
